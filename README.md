@@ -16,6 +16,8 @@ main.js - קובץ ראשי
 
 raceService.js - קובץ הורדת נתונים מהשרת
 
+datastorage.json - קובץ אחסון נתונים
+
 dataExtraction.js - קובץ חילוץ המידע הרלוונטי
 
 ### Running the application
@@ -26,11 +28,11 @@ node main.js
 
 ### Step 1
 
-The application sends a request to our server - handling a server error - holding the data in the structure of a json file.
+The application sends a request to our server - handling a server error -  the data keep in json file.
 
 ### Step 2
 
-The app receives all this data and extracts all the information relevant to us - how many cars there are, who is coming to the pit, etc.
+The app Extracts all data from our storage file and Breaking down the information relevant to us - how many cars there are, who is coming to the pit, etc.
 
 ### Step 3
 
