@@ -23,8 +23,7 @@ export function waitingCars() {
   for (const car of allCars) {
     if (car["status"] === "waiting") {
       withCars.push(car);
-        console.log(`Car: ${car.carNumber} | Driver: ${car.driverName}`);
-      
+      console.log(`Car: ${car.carNumber} | Driver: ${car.driverName}`);
     }
   }
   if (withCars.length === 0) {
@@ -33,17 +32,18 @@ export function waitingCars() {
   return withCars;
 }
 
-export function doneCars(){
-    const doneCar = []
-    for(const car of allCars){
-        if(car['status'] === "done"){
-            doneCar.push(car)
-             console.log(`Car: ${car.carNumber} | Driver: ${car.driverName}`)
-        }
-    }if(doneCar.length === 0){
-        console.log("no cars dont yet");
-        
-    }return 
+export function doneCars() {
+  const doneCar = [];
+  for (const car of allCars) {
+    if (car["status"] === "done") {
+      doneCar.push(car);
+      console.log(`Car: ${car.carNumber} | Driver: ${car.driverName}`);
+    }
+  }
+  if (doneCar.length === 0) {
+    console.log("no cars dont yet");
+  }
+  return;
 }
 
 export function findCarBynum(num) {
