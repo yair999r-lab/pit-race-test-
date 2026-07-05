@@ -5,37 +5,45 @@ export async function readFromJson() {
   try {
     const data = await fs.readFile("./allData.json", "utf-8");
     return json(data);
-  } catch {}
+  } catch {
+    console.log("filad to read file!");
+  }
 }
 
 const data = await readFromJson();
 
 export const race = data.raceName;
-
-export const allCars = data["cars"];
 export const currentLap = data.currentLap;
 export const totalLaps = data.totalLaps;
-// console.log(totalLaps, currentLap);
 
-// const cars = []
-// for(const car of allCars){
-//     cars.push(car)
-// }
-// console.log(cars);
+export const allCars = data["cars"];
 
 export function waitingCars() {
-    const withCars = []
+  const withCars = [];
   for (const car of allCars) {
     if (car["status"] === "waiting") {
-        withCars.push(car)
-      for (const car of withCars) {
+      withCars.push(car);
         console.log(`Car: ${car.carNumber} | Driver: ${car.driverName}`);
-      }
+      
     }
-  }if(withCars.length === 0){
+  }
+  if (withCars.length === 0) {
     console.log("no cars waiting");
   }
   return withCars;
+}
+
+export function doneCars(){
+    const doneCar = []
+    for(const car of allCars){
+        if(car['status'] === "done"){
+            doneCar.push(car)
+             console.log(`Car: ${car.carNumber} | Driver: ${car.driverName}`)
+        }
+    }if(doneCar.length === 0){
+        console.log("no cars dont yet");
+        
+    }return 
 }
 
 export function findCarBynum(num) {

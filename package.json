@@ -1,0 +1,21 @@
+{
+  "name": "tests_projects",
+  "version": "1.0.0",
+  "description": "The app receives current data about the race We take the raw data and present all relevant, organized data",
+  "main": "raceService.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yair999r-lab/pit-race-test-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/yair999r-lab/pit-race-test-/issues"
+  },
+  "homepage": "https://github.com/yair999r-lab/pit-race-test-#readme"
+}

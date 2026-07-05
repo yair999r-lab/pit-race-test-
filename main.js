@@ -1,5 +1,5 @@
 import { downloadingInformation, writeToJsonFile } from "./raceService.js"; 
-import { readFromJson, race, currentLap, totalLaps, allCars, waitingCars, findCarBynum } from "./dataExtraction.js";
+import { readFromJson, race, currentLap, totalLaps, allCars, waitingCars, findCarBynum, doneCars } from "./dataExtraction.js";
 
 
 console.log("Pit Stop Queue - Race Team Management System")
@@ -19,6 +19,10 @@ console.log(`Total cars in race: ${allCars.length}\n`);
 
 console.log("Cars waiting for pit stop: ")
 const witingcar = waitingCars()
+
+console.log("\nCars done: ");
+doneCars()
+
 
 if(witingcar.length > 0){
 console.log("\nNext car to enter the pit: ");
